@@ -37,12 +37,7 @@ private fun task2(input: List<String>): Int {
     return safeReports
 }
 
-fun main() {
-    println(task1(readInput("2")))
-    println(task2(readInput("2")))
-}
-
-fun isSafe(report: List<Int>): Boolean {
+private fun isSafe(report: List<Int>): Boolean {
     val differences = report.windowed(2).map { it.last() - it.first() }
 
     val isAllIncreasing = differences.all { it in 1..3 }

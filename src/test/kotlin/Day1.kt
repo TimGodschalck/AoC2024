@@ -24,7 +24,7 @@ private fun task2(input: List<String>): Int {
     return similarityScore
 }
 
-fun extractValues(input: List<String>): Pair<List<Int>, List<Int>> {
+private fun extractValues(input: List<String>): Pair<List<Int>, List<Int>> {
     val pairs = input.map { it -> it.split("\\s+".toRegex()).map { it.toInt() } }
     val leftList = pairs.map { it[0] }.sorted()
     val rightList = pairs.map { it[1] }.sorted()
